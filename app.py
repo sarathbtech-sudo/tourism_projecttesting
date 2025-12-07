@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-MODEL_PATH = Path("tourism_project1") / "model_building" / "model.pkl"
+MODEL_PATH = Path("tourism_projectfinal") / "model_building" / "model.pkl"
 
 
 @st.cache_resource
@@ -127,12 +127,16 @@ def main():
         st.subheader("Prediction Result")
         if pred == 1:
             st.success(
-                f"✅ This customer is **LIKELY** to purchase the Wellness Tourism Package.\n\n"
+                f"✅ This customer is **LIKELY** to purchase the Wellness Tourism Package.
+
+"
                 f"Estimated probability: **{proba:.2%}**"
             )
         else:
             st.info(
-                f"ℹ️ This customer is **LESS LIKELY** to purchase the Wellness Tourism Package.\n\n"
+                f"ℹ️ This customer is **LESS LIKELY** to purchase the Wellness Tourism Package.
+
+"
                 f"Estimated probability: **{proba:.2%}**"
             )
 
